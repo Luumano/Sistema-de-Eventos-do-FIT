@@ -1,0 +1,187 @@
+/* Estilos principais */
+body{
+    font-family: 'Orbitron', sans-serif;  /* Fonte futurista */
+    background-color: #111;
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilo da barra de navegação */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    border-bottom: 3px solid #ff00ff;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    color: #ff00ff;
+}
+
+/* Estilo do titulo principal */
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 32px;
+    color: #0FF;
+}
+
+/* Estilo da lista de eventos */
+.event-details{
+    margin-top: 10px;
+    background-color: #333; /* Fundo diferente para destacar*/
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.event-list{
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event-item{
+    background-color: #222;
+    border: 2px solid #0FF;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-item input{
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding:  10px;
+    border: 2px solid #737c7c;
+    background-color: #111;
+    color: #FFF;
+}
+
+.event-item button{
+    margin: 5px;
+    padding: 10px;
+    color: #000;
+    font-size: 18px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.event-item label{
+    color: #FFF;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.event-item:hover{
+    /*transform: scale(1.05);*/
+    box-shadow: 0 0 10px #0FF;
+}
+
+.event-title{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #FFF;   
+}
+
+.event-summary{
+    font-size: 14px;
+    color: #CCC;
+}
+
+/* Estilo da área superior */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    border-bottom: 3px solid #00ffff;
+}
+
+.header .title{
+    display: flex;
+    align-items: 24px;
+    color: #ffeb3b;
+}
+
+.header .title span{
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.header .title::before{
+    /*content: "COORES";*/
+    font-size: 16px;
+    color: #FFF;
+    margin-right: 20px;
+}
+
+.header .details{
+    display: flex;
+    align-items: center;
+}
+
+.header .details div{
+    margin-left: 10px;
+    width: 40px;
+    height: 10px;
+    background-color: #ffeb3b;
+    border: 2px solid #FFF;
+}
+
+/* Estilos para cada cor */
+.color-block{
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+}
+
+.color-block::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: #FFF;
+    border-radius: 5px 5px 0;
+}
+
+.color-cyan { background-color: #00ffff; }
+.color-yellow { background-color: #ffeb3b; }
+.color-magenta { background-color: #ff00ff; }
+.color-black { background-color: #000; }
+

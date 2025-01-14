@@ -1,0 +1,193 @@
+/*---- CSS atualizado para a tela de Cadastro -------*/
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e1e1e, #141414);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alterado de center para flex-start */
+    min-height: 100vh;
+    color: #ffffff;
+    overflow-x: hidden; /* Permite scroll vertical apenas */
+}
+
+/* Container principal */
+.container {
+    background-color: #202020;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    max-width: 450px;
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px; /* Mantém centralizado com espaço adicional */
+}
+
+/* Título */
+.container h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+/* Estilização do formulário */
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container label {
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #a9a9a9;
+}
+
+.container input,
+.container select {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #282828;
+    color: #ffffff;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.container input:focus,
+.container select:focus {
+    border-color: #FFD700;
+}
+
+/* Botão */
+.container button {
+    background-color: #FFD700;
+    color: #000000;
+    font-size: 1em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.container button:hover {
+    background-color: #ffc700;
+}
+
+
+/* Estilo para o campo de "Declaração" */
+.event-form p {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.event-form input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilo para o link de "Ver mais" */
+.show-more {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.show-more:hover {
+    color: #0056b3;
+}
+
+/* Estilo para o texto oculto inicialmente */
+.hidden-info {
+    display: none;
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Links */
+.container a {
+    font-size: 0.9em;
+    color: #FFD700;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* Layout do cabeçalho */
+.header {
+    background-color: #333;
+    padding: 10px;
+    border-bottom: 2px solid #FFD700;
+    margin-bottom: 20px;
+}
+
+.header .title {
+    font-size: 1.2em;
+    color: #FFD700;
+}
+
+.header .title span {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+/* Logo */
+.login-fit img {
+    display: block;
+
+    max-width: 2000px;
+    margin: 0 auto 20px;
+}
+
+/* Ocultar a logo em dispositivos móveis */
+@media (max-width: 600px) {
+    .login-fit img {
+        display: none;
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .container h2 {
+        font-size: 1.5em;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .title {
+        font-size: 1em;
+    }
+
+    .header .title span {
+        font-size: 0.7em;
+    }
+}
+
+/* Estilos adicionais para evitar cortes em telas pequenas */
+@media (max-width: 400px) {
+    .container form {
+        gap: 10px;
+    }
+
+    .container button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}

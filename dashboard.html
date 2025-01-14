@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/grafox.png">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Dashboard de Inscrições</h1>
+
+        <!--Usuários Inscritos-->
+        <section id="feedback-section">
+            <h2>Usuários Inscritos</h2>
+            <div id="feedback-container">
+                <!-- inscritos serão carregadas via JavaScript-->
+            </div>
+        </section>
+
+        <div id="messages-container" class="dashboard-section">
+            <h2>Mensagens dos Usuários</h2>
+            <table id="messages-table">
+                <thead>
+                    <tr>
+                        <th>Mensagem</th>
+                        <th>Responder</th>
+                    </tr>
+                </thead>
+                <tbody id="messages-body">
+                    <!-- As mensagens dos usuários serão carregadas aqui -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Gráficos de Inscrições e Confirmações -->
+        <!--<section id="general-chart-section">
+            <h2>Gráfico de Inscritos e Confirmados por Evento</h2>
+            <canvas id="generalChart" width="400" height="200"></canvas>
+        </section>-->
+        
+        <!-- Gráficos de alunos que Passaram no Evento -->
+        <!--<section id="students-passed-chart">
+            <h2>Gráfico de Alunos que passaram no Evento</h2>
+            <canvas id="studentsPassedChart" width="400" height="200"></canvas>
+        </section>-->
+        
+        <!-- Gráfico de Instituições e Quantidade de Alunos Confirmados -->
+        <section id="institutions-chart">
+            <h2>Gráfico de Instituições/Escolas</h2>
+            <canvas id="institutionsRegisteredChart" width="400" heigth="200"></canvas>
+        </section>
+        
+        <section id="escola-chart">
+            <h2>Gráfico de Inscritos e Confirmados por Evento</h2>
+            <canvas id="schoolPassChart" width="400" height="200"></canvas>
+        </section>
+                
+        <section id="escola-chart">
+            <h2>Gráficos de Escolas que Passaram Pelo Evento</h2>
+            <canvas id="schoolPassChart2" width="400" height="200"></canvas>
+        </section>
+        
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+/*Estilo da tela de login*/
+body{
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-fit {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.login-fit img {
+    margin-right: 50px;
+}
+
+/* Adicionando linhas brilhates ao fundo */
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 10%, #0D0D0D 10.5%) 0 0 / 3% 3%, radial-gradient(circle at center, #0D0D0D 49%, transparent 50%) 50% 50% / 20% 20%;
+    z-index: -2;
+    opacity: 0.3;
+}
+
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, #0FF, transparent), linear-gradient(135deg, transparent, #FFF, transparent);
+    z-index: -1;
+    animation: move 5s linear infinite;
+    mix-blend-mode: overlay;
+}
+
+@keyframes move{
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 200% 200%;
+    }
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #FF00FF;
+}
+
+.login-container{
+    background-color: #222;
+    border: 2px solid #0FF;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /*Sombra ciano*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+}
+
+.login-container h2{
+    margin-bottom: 20px;
+    color: #0FF;
+}
+
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-container label{
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #FFF;
+}
+
+.login-container input{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #737c7c;
+    border-radius: 5px;
+    background-color: #333;
+    color: #FFF;
+    font-size: 1em;
+    outline: none;
+}
+
+.login-container button{
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: #0FF;
+    color: #000;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    /*border: 2px solid #FFF;*/
+}
+
+.login-container button:hover{
+    background-color: #00cccc;
+}
+
+.login-container a{
+    color: #ffeb3b;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.login-container a:hover{
+    text-decoration: underline;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;
+    border-bottom: 3px solid #0FF;
+}
+
+.header .title{
+    display: flex;
+    align-items: center;
+    color: #FFF;
+}
+
+.header .title span{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.header .details{
+    display: flex;
+    align-items: center;
+}
+
+.header .details div{
+    margin-left: 10px;
+    width: 40px;
+    height: 10px;
+    background-color: #0FF;
+    border: 2px solid #FFF;
+}
+
+.login-container .footer{
+    top: 5px;
+    padding: 5px;
+    left: 5px;
+    font-size: 0.8em;
+}
+
+/* Estilo para status desconectado*/
+.footer.disconnected{
+    color: #FF0000;
+}
+
+.footer.connected{
+    color: #00FF00;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px){
+    h1{
+        font-size: 1.5em;
+    }
+
+    .login-fit img{
+        /* Ocultar imagem em telas muito pequenas */
+        display: none;
+    }
+
+    .login-container{
+        /* Mais espaço para telas muitos pequenas */
+        width: 70%;
+        padding: 15px;
+    }
+
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .title span{
+        font-size: 20px;
+    }
+
+    .header .details{
+        margin-top: 10px;
+    }
+}

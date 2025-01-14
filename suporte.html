@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/grafox.png">
+    <title>Suporte ao Usuário</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/suporte.css">
+    <link rel="stylesheet" href="css/menuconfig.css">
+</head>
+<body>
+<!--Configuração menu-->
+    <nav class="navbar">
+        <div class="logo"><img src="imagens/FIT-logo.png" alt="Logo Oficial" width="100px" height="50px"></div>
+        <ul class="nav-links">
+          <li><a href="detalhesEventos.html">Eventos</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <li><a href="suporte.html">Suporte e Feedbacks</a></li>
+          <li><a href="logout.php">Logout</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+    <div class="container">
+        <h1>Suporte ao Usuário</h1>
+
+        <!-- Formulário para Enviar Mensagem -->
+        <div class="message-form">
+            <h2>Envie sua pergunta ou Feedback</h2>
+            <textarea id="user-message" rows="4" placeholder="Digite sua Mensagem..."></textarea>
+            <button onclick="sendMessage()">Enviar Mensagem</button>
+        </div>
+
+        <!-- Área para ver mensagens e respostas -->
+         <div class="messages-list">
+            <h2>Suas Mensagens e Respostas</h2>
+            <ul id="messages">
+                <!-- Mensagens enviadas e respostas aparecerão aqui -->
+            </ul>
+         </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/22a4a36307.js" crossorigin="anonymous"></script>
+    <script src="js/menuconfig.js"></script>
+    <script src="js/suporte.js"></script>
+</body>
+</html>

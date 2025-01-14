@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="imagens/grafox.png">
+    <title>Recuperação de Senha</title>
+    <link rel="stylesheet" href="css/recuperar_senha.css">
+</head>
+<body>
+    <div class="container">
+        <img src="imagens/FIT-logo.png" width="100px" height="80px">
+        <h2>Recuperação de Senha</h2>
+        <div id="nomeForm">
+            <label for="identificador">Matricula/CPF:</label>
+            <input typer="number" id="identificador" name="identificador" placeholder="Digite sua matricula ou CPF" required>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            <button id="checkNomeBtn">Verificar Nome</button>
+        </div>
+        
+        <div id="novaSenhaForm" style="display: none;">
+            <label for="novaSenha">Nova Senha:</label>
+            <input type="password" id="novaSenha" name="novaSenha" placeholder="Digite sua nova senha" required>
+            <button id="updateSenhaBtn">Atualizar Senha</button>
+        </div>
+
+        <div id="responseMessage"></div>
+    </div>
+
+    <script src="js/recuperar_senha.js"></script>
+</body>
+</html>

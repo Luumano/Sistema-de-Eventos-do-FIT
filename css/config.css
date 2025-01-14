@@ -1,0 +1,99 @@
+/* Estilo da tela de edição */
+.profile-section{
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-section h2{
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.profile-section form label{
+    display: block;
+    text-align: left;
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.profile-section form input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border 0.3s;
+}
+
+.profile-section form input:focus{
+    border-color: #007BFF;
+    outline: none;
+}
+
+.profile-section button[type="submit"]{
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    color: #FFF;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-section button[type="submit"]:hover{
+    background-color: #0056B3;
+}
+
+.delete{
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  font-size: 1em;
+  color: #FFF;
+  background-color: #971a03;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete:hover{
+  background-color: #5f0f01;
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+      margin: 20px;
+      padding: 15px;
+    }
+    
+    .profile-section h2 {
+      font-size: 1.5em;
+    }
+  
+    .profile-section form label {
+      font-size: 0.9em;
+    }
+  
+    .profile-section form input {
+      font-size: 0.9em;
+    }
+  
+    .profile-section button[type="submit"] {
+      font-size: 0.9em;
+    }
+  }
+
+

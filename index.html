@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/grafox.png">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login - FIT</title>
+</head>
+<body>
+    <div class="login-fit">
+        <img src="imagens/fit2k24.png" alt="logo_fit">
+    </div>
+    <div class="login-container">
+        <div class="header">
+            <div class="title">
+                <span>ACESSO SEGURO</span>
+            </div>
+        </div>
+        <div class="login-user">
+            <h2><i class="fas fa-user-lock"></i> Login Usuário</h2>
+            <form id="user-login-form" onsubmit="event.preventDefault(); userLogin();">
+                <label for="identificador">Matricula ou CPF</label>
+                <input type="number" id="user-identificador" placeholder="Digite sua Matricula ou CPF usados na hora do cadastro" required>
+                <label for="senha">Senha</label>
+                <input type="password" id="user-password" placeholder="Digite sua Senha" required>
+                <button type="submit"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+                <a href="cadastro">Ainda não tem cadastro?</a>
+                <a href="https://t.me/+4SBQa3eDinYzNTQ5">Precisa de Ajuda?</a>
+                <br>
+                <a href="recuperar_senha" class="recover-password-link">Esqueceu a senha?</a>
+            </form>
+        </div>
+        <div class="footer" id="status-footer">STATUS: DISCONNECTED</div>
+    </div>
+    <script src="https://kit.fontawesome.com/22a4a36307.js" crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

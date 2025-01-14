@@ -1,0 +1,281 @@
+/* Estilos para a seção principal de eventos */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Cartão de detalhes do evento */
+.profile-card {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card .logo-section h3,
+.profile-card .event-details p {
+  margin: 5px 0;
+}
+
+.profile-card .event-details {
+  margin-top: 15px;
+}
+
+#qrcode-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#download-qrcode {
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#download-qrcode:hover {
+  background-color: #555;
+}
+
+/* Cartão de inscrição */
+.inscricao-card {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inscricao-card h2 {
+  margin-bottom: 15px;
+}
+
+#inscricao-link {
+  padding: 10px;
+  background: #ff6347;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+#inscricao-link:hover {
+  text-decoration: underline;
+}
+
+.event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-list li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-list li:hover {
+  background-color: #f4f4f9;
+}
+
+.event-list li h4 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.event-list li p {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Modal de inscrição */
+/* Modal de inscrição */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  margin: 80px auto; /* Garante que o modal não ultrapasse os limites da tela */
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Botões do modal */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-confirm {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.btn-cancel {
+  background-color: #f44336;
+  color: #fff;
+}
+
+/* Fechar modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Estilos gerais para dispositivos móveis */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .main-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Cartão de detalhes do evento */
+  .profile-card {
+    padding: 15px;
+  }
+
+  .profile-card h3,
+  .profile-card p {
+    font-size: 1em;
+  }
+
+  #qrcode-section {
+    margin-top: 15px;
+  }
+
+  #download-qrcode {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  /* Cartão de inscrição */
+  .inscricao-card {
+    padding: 15px;
+  }
+
+  .inscricao-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  #inscricao-link {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+
+  /* Lista de eventos */
+  .event-list li {
+    padding: 10px;
+  }
+
+  .event-list li h4 {
+    font-size: 1em;
+  }
+
+  .event-list li p {
+    font-size: 0.8em;
+  }
+
+  /* Modal de inscrição */
+  .modal-content {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .modal-content h2 {
+    font-size: 1.5em;
+  }
+
+  .modal-content label {
+    font-size: 0.9em;
+  }
+
+  .modal-content input {
+    padding: 6px;
+    font-size: 0.9em;
+  }
+
+  .modal-buttons button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  /* Botões do modal */
+  .btn-confirm,
+  .btn-cancel {
+    font-size: 0.9em;
+  }
+
+  /* Ajustes no botão de fechar o modal */
+  .close {
+    top: 5px;
+    right: 10px;
+    font-size: 1.3em;
+  }
+}

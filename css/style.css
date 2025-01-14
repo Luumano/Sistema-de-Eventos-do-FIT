@@ -1,0 +1,298 @@
+/* Estilo geral da tela de inscritos */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0D0D0D;
+    color: #FFF;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0FF;
+    text-decoration: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+/* Navbar */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    background-color: #222;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffebeb;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0FF;
+}
+
+/* Botão de abrir câmera */
+#openCameraButton {
+    padding: 10px 20px;
+    background-color: #0FF;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+#openCameraButton:hover {
+    background-color: #00C5C5;
+}
+
+/* Video Stream */
+#video {
+    border: 2px solid #0FF;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tabelas Dinâmicas */
+#tables-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222;
+    color: #FFF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #333;
+    color: #FFEB3B;
+}
+
+.confirmed {
+    background-color: #155724;
+    color: #d4edda;
+}
+
+.not-confirmed {
+    background-color: #470202;
+    color: #ffebeb;
+}
+
+.confirmation-message {
+    font-size: 1.2em;
+    margin-top: 10px;
+    transition: opacity 2s ease;
+}
+
+
+/* Estilo da pesquisa */
+#searchButton{
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#searchInput{
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+/* Botão para confirmar a presença */
+button-confirm{
+    background-color: #fff;
+    cursor: pointer;
+    color: #000;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;    
+}
+
+/* Estilo download do Excel */
+button{
+    cursor: pointer;
+    margin-bottom: 5px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Botão para baixar tabela */
+#downloadExcel {
+    padding: 10px 20px;
+    background-color: #0FF;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+#downloadExcel:hover {
+    background-color: #00c5c5;
+}
+
+/* Mensagem de Confirmação */
+#confirmation-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px 20px;
+    border: 1px solid #5cb85c;
+    border-radius: 5px;
+    position: fixed;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* QR Code */
+#qrcode-1 {
+    margin-top: 10px;
+    display: block;
+    border: 2px solid #0FF;
+    border-radius: 8px;
+}
+
+a#download-1 {
+    display: block;
+    margin-top: 10px;
+    color: #0FF;
+    text-decoration: none;
+    text-align: center;
+}
+
+a#download-1:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+
+    table, thead, tbody, th, td, tr{
+        display: block;
+        width: 100%;
+    }
+
+    thead tr{
+        display: none;
+    }
+
+    tr{
+        margin-bottom: 10px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #222;
+    }
+
+    td{
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #333;
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #openCameraButton, #downloadExcel {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #video {
+        width: 100%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    #openCameraButton, #downloadExcel {
+        width: 80%;
+    }
+
+    #video {
+        width: 80%;
+    }
+}
+
+/* Telas médias (tablets maiores ou laptops pequenos) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    table {
+        font-size: 1em;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+/* Telas grandes (desktop) */
+@media (min-width: 1201px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #openCameraButton, #downloadExcel {
+        width: auto;
+    }
+}

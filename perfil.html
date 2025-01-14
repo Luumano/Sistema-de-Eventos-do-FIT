@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="imagens/grafox.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário - FIT2K24</title>
+    <link rel="stylesheet" href="css/menuconfig.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="imagens/FIT-logo.png" alt="Logo Oficial" width="100px" height="50px"></div>
+        <ul class="nav-links">
+          <li><a href="detalhesEventos">Eventos</a></li>
+          <li><a href="perfil">Perfil</a></li>
+          <li><a href="suporte">Suporte e Feedbacks</a></li>
+          <li><a href="logout.php">Logout</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+        <section class="main-section">
+            <div class="profile-card">
+                <div class="logo-section">
+                    <img src="imagens/fit2k24.png" alt="logo" width="120px" height="50px">
+                    <p>Sua entrada em Dados para um Mundo Conectado</p>
+                </div>
+                <div class="user-info">
+                    <p><strong>Nome:</strong> <span id="user-name"></span></p>
+                    <p><strong>Email:</strong> <span id="user-email"></span></p>
+                    <p><strong>Curso:</strong> <span id="user-course"></span></p>
+                    <p><strong>Instituição/Escola:</strong> <span id="user-instituicao"></span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h2>Eventos Cadastrados</h2>
+            <ul id="events-list"></ul>
+        </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/atualizar_perfil.js"></script>
+    <script src="js/menuconfig.js"></script>
+</body>
+</html>

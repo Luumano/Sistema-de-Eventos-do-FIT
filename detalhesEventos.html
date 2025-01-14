@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/grafox.png">
+    <title>Eventos</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/menuconfig.css">
+    <link rel="stylesheet" href="css/eve.css">
+    
+    <style>
+    .alert {
+    width: auto;
+    padding: 20px;
+    background-color: #fff4e5;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+    }
+
+    .alert h2 {
+        margin: 0;
+        color: #d97706;
+    }
+    
+    .alert p {
+        margin: 10px 0 0;
+        color: #5a5a5a;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><img src="imagens/FIT-logo.png" alt="Logo Oficial" width="100px" height="50px"></div>
+    <ul class="nav-links">
+      <li><a href="detalhesEventos">Eventos</a></li>
+      <li><a href="perfil">Perfil</a></li>
+      <li><a href="suporte">Suporte e Feedbacks</a></li>
+      <li><a href="logout.php">Logout</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+
+    <div class="container">
+        <section class="main-section">
+            <div class="profile-card">
+                <div class="logo-section">
+                        <div class="alert">
+                            <h2>Aviso Importante</h2>
+                            <p>
+                                Nosso servidor está enfrentando um alto volume de acessos no momento, o que pode <b>causar lentidão</b> no processo de inscrição.
+                            </p>
+                            <p>Estamos trabalhando para resolver o problema o mais rápido possível. <b>Agradecemos sua paciência!</b></p>
+                        </div>
+                    <p><strong>Participante: <span id="nome-participante"></span></strong></p>
+                    <p><strong>Instituição/Escola: <span id="ensino-instituicao"></span></strong></p>
+                    
+                    <!--<h3>Titulo Evento:</h3>-->
+                    <h4 id="event-title" hidden></h4>
+                    <h3>Evento:</h3>
+                    <h4 id="titulo">Selecione o Evento...<h4>
+                   <p><strong>Período:</strong> <span id="event-periodo">Selecione o evento...</span></p>
+                    <h3>Programação</h3>
+                    <div class="event-details">
+                        <p><strong>Palestra:</strong></p>
+                        <p><span id="event-palestra">Selecione o evento....</span></p>
+                        <p><strong>Data:</strong></p> 
+                        <p><span id="event-data"  id="event-horario">Selecione o evento...</span> <span>-</span> <span id="event-horario">Selecione o evento...</span></p>
+                        <p><strong>Palestrante</strong> <span id="event-palestrante">Selecione o evento...</span></p>
+                        <p><strong>Local:</strong> <span id="event-local">Selecione o evento...</span></p>
+                    </div>
+                </div>
+
+                <div id="qrcode-section">
+                    <div id="qrcode"></div>
+                    <button id="download-qrcode">Download QR Code</button>
+                </div>
+            </div>
+            <div class="inscricao-card">
+                <h2>Inscreve-se no Evento</h2>
+                <a href="#" id="inscricao-link">Inscreva-se como ouvinte</a>
+
+                <ul id="event-list" class="event-list"> 
+                    <!--Eventos serão carregados dinamicamente-->
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div id="inscricao-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Revise sua inscrição</h2>
+            <form id="inscricao-form">
+                <!-- Primeira linha: Matricula/CPF e Nome Completo -->
+                <div>
+                    <label for="identificador">Matricula/CPF</label>
+                    <input type="text" id="user-identificador" disabled>
+                </div>
+                
+                <div>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" disabled>
+                </div>
+                
+                <div>
+                    <label for="curso">Curso</label>
+                    <input type="text" id="curso" disabled>
+                </div>
+    
+                <!-- Terceira linha: Instituição de Ensino (linha inteira) -->
+                <div class="full-width">
+                    <label for="instituicao">Instituição de Ensino</label>
+                    <input type="text" id="instituicao" disabled>
+                </div>
+    
+                <!-- Quarta linha: Email e Telefone -->
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" disabled>
+                </div>
+                <div>
+                    <label for="telefone">Celular</label>
+                    <input type="text" id="telefone" disabled>
+                </div>
+            </form>
+    
+            <div class="modal-buttons">
+                <button id="confirmar-presenca" class="btn-confirm">Confirmar Inscrição</button>
+                <button id="cancelar" class="btn-cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/22a4a36307.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/detalhesEventos.js"></script>
+    <script src="js/menuconfig.js"></script>
+</body>
+</html>

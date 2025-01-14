@@ -1,0 +1,192 @@
+/* Estilos gerais do body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Seção principal do perfil */
+  .main-section {
+      display: flex;
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      margin: 0 auto 20px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      gap: 40px;
+      justify-content: center;
+  }
+
+
+    a{
+    color: #ff6347;
+    cursor: pointer;
+    text-decoration: none;
+    /*font-weight: bold;*/
+    display: inline-block;
+    margin-bottom: 5px;
+    }
+  
+    span{
+        color: #ff6347;
+        font-size: 16px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+
+  /* Cartão de perfil */
+  .profile-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .profile-card .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .profile-card .logo-section img {
+    margin-bottom: 10px;
+  }
+  
+  .profile-card .logo-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+  }
+  
+  .profile-card .user-info {
+    margin-top: 10px;
+  }
+  
+  .profile-card .user-info p {
+    font-size: 1em;
+    color: #333;
+    margin: 8px 0;
+  }
+  
+  .profile-card .user-info span {
+    color: #777;
+  }
+  
+  /* Estilos para a seção de eventos */
+  .events-section {
+    width: 100%; /* Ajuste para ocupar toda a largura disponível dentro do contêiner principal */
+    max-width: 600px; /* Limita a largura máxima */
+    padding: 20px;
+    margin: 0 auto 20px auto; /* Centraliza o contêiner */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .events-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  #events-list {
+    list-style-type: none;
+    padding: 0 10px; /* Adiciona espaçamento lateral interno */
+  }
+  
+  #events-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #events-list li:hover {
+    background-color: #f4f4f9;
+  }
+  
+  #events-list li h4 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+  }
+  
+  #events-list li p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Responsividade para dispositivos móveis */
+  @media (max-width: 768px) {
+    .main-section {
+      max-width: 100%;
+      gap: 10px; /* Reduz o espaçamento entre as seções em telas pequenas */
+    }
+  
+    .profile-card {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    .nav-links a {
+        font-size: 1.2em;
+        padding: 15px;
+        display: block;
+        width: 100%;
+        transition: color 0.3s;
+    }
+
+    a{
+    color: #ff6347;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+    }
+
+    span{
+        color: #ff6347;
+        font-size: 16px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+    .events-section {
+      padding: 15px;
+      width: 90%; /* Ajusta para ocupar toda a largura em telas menores */
+      max-width: 90%; /* Remove a largura máxima */
+      margin: 0 auto; /* Centraliza */
+    }
+  
+    #events-list {
+      padding: 0 5px; /* Ajusta o espaçamento lateral em dispositivos móveis */
+    }
+  
+    #events-list li {
+      padding: 12px;
+    }
+  
+    #events-list li h4 {
+      font-size: 1em;
+    }
+  
+    #events-list li p {
+      font-size: 0.8em;
+    }
+  }
+  

@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Não reescrever se for um arquivo ou diretório existente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Remover a extensão .html da URL
+RewriteRule ^([^/]+)$ $1.html [L,QSA]
+
+# Redirecionar URLs antigas (com .html) para as novas (sem .html)
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Impedir o acesso direto a URLs com a extensão .html
+RewriteCond %{REQUEST_URI} \.html$
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]

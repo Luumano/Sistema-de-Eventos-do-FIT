@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/grafox.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Leitor QR Code</title>
+</head>
+<body>
+
+    <h1>Inscritos</h1>
+    <button id="openCameraButton">Abrir Câmera</button>
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <script src="https://unpkg.com/jsqr/dist/jsQR.js"></script>
+    <script src="js/leitor.js"></script>
+</body>
+</html>

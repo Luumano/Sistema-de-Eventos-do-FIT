@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/grafox.png">
+    <title>Cadastro - FIT</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <div class="login-fit">
+        <img src="imagens/fit2k24.png" alt="logo_fit">
+    </div>
+<div class="container">
+        <div class="header">
+            <div class="title">
+                <h2>Cadastro FIT</h2>
+            </div>
+        </div>
+        <div>
+        <h2></h2>
+            <form class="event-form" id="registrationForm">
+                <label for="identificador">Matricula (UFC) - CPF (Instituição/Escola)</label>
+                <input type="number" name="identificador" id="identificador" placeholder="Digite sua Matrícula ou CPF" required>
+                <input type="hidden" name="tipo_identificador" id="tipo_identificador">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu Nome completo" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+				<label for="confirmar senha">Confirmar Senha:</label>
+				<input type="confirm-password" name="password" id="password" placeholder="Digite a senha novamente" required>
+                <label for="curso">Curso (Somente para alunos da UFC de Crateús):</label>
+        <select name="curso" id="curso">
+            <option value="" disabled selected>Selecione seu Curso</option>
+            <option value="Sistemas de Informação">Sistemas de Informação</option>
+            <option value="Ciência da Computação">Ciência da Computação</option>
+            <option value="Engenharia Cívil">Engenharia Cívil</option>
+            <option value="Engenharia de Minas">Engenharia de Minas</option>
+            <option value="Engenharia Ambiental e Sanitária">Engenharia Ambiental e Sanitária</option>
+        </select>
+			<label for="curso">Selecione sua Instituição/Escola</label>
+		<select name="instituicao" id="instituicao">
+            <option value="" disabled selected>Selecione sua Instituição/Escola</option>
+            <option value="EEEP Dario Catunda Fontenele">EEEP Dario Catunda Fontenele</option>
+            <option value="EEEP Maria Altair Americo Saboia">EEEP Maria Altair Américo Saboia</option>
+            <option value="EEMTI LIONS CLUB">EEMTI LIONS CLUB</option>
+            <option value="EEEP Maria Eudes Bezerra Veras">EEEP Maria Eudes Bezerra Veras"</option>
+            <option value="Faculdade Princesa do Oeste">Faculdade Princesa do Oeste - (FPO)</option>
+			<option value="E.C Vilebaldo Martins">E.C Vilebaldo Martins</option>
+			<option value="IFCE Crateús">IFCE - Crateús</option>
+        </select>
+            <label for="telefone">Telefone:</label>
+            <input type="number" name="telefone" id="telefone" placeholder="Digite o número do seu WhatsApp" required>
+            <button type="submit">Cadastrar</button>
+                <p>
+                    <input type="radio" name="termos_aceitos" id="termos_aceitos" value="valor"/> 
+                    Declaro estar ciente que os dados pessoais serão utilizados no sistema de acordo com a Lei Geral de Proteção de Dados (n° 13.709/2018) e                             autorizo a UFC Campus de Ceateús o compartilhamento com os parceiros, patrocinadores e apoiadores dos seus eventos. 
+                    <span class="show-more" onclick="toggleInfo()">Ver mais</span>
+                                    <!-- Texto adicional oculto -->
+                <p class="hidden-info" id="moreInfo">
+                    O compartilhamento de dados está limitado às informações necessárias para a execução de eventos, conforme os termos acordados com os                                 organizadores. Esses dados serão utilizados exclusivamente para os fins descritos na política de privacidade, e não serão vendidos nem                               compartilhados com terceiros não autorizados.
+                </p>
+                </p>
+            <a href="index.html">Já está Cadastrado?</a>
+        </form>
+    </div>
+</div>
+    <!--<div id="successMessage" class="mensagemSucesso">Cadastro realizado com sucesso!</div>-->
+    <script src="js/cadastro.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>

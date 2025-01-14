@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #000; /* Gradiente de fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+/* Container do Formulário */
+.container {
+    background: #000;
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); /* Sombra de neon */
+    width: 350px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid rgba(0, 255, 255, 0.3); /* Borda neon */
+    max-width: 100%; /* Garantir que não ultrapasse o tamanho da tela */
+    margin: 0 20px; /* Adicionar margem lateral para telas pequenas */
+}
+
+/* Logo */
+.container img.logo {
+    width: 100px; /* Tamanho da logo */
+    height: auto;
+    margin-bottom: 20px;
+    animation: glow 1.5s ease-in-out infinite alternate; /* Efeito de brilho */
+}
+
+/* Efeito de brilho para a logo */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+}
+
+/* Título */
+h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Label */
+label {
+    text-align: left;
+    margin-top: 15px;
+    color: #e0e0e0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Campos de Entrada */
+input {
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Sombra de neon */
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Cor do placeholder */
+}
+
+input:focus {
+    border-color: #00ffff; /* Cor neon ao focar */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Sombra ao focar */
+}
+
+/* Botão */
+button {
+    padding: 12px 20px;
+    background: #fff; /* Gradiente de cor vibrante */
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Efeito de brilho no botão */
+}
+
+button:hover {
+    background: #dcdcdc; /* Inverter gradiente no hover */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* Aumentar o brilho no hover */
+}
+
+/* Mensagem de Resposta */
+#responseMessage {
+    margin-top: 20px;
+    color: #00ff00; /* Cor verde para mensagem de sucesso */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#responseMessage.error {
+    color: #ff0044; /* Cor vermelha para erro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Tornar o container mais estreito em telas pequenas */
+        padding: 25px; /* Menos padding para telas pequenas */
+    }
+
+    h2 {
+        font-size: 24px; /* Reduzir o tamanho do título */
+    }
+
+    label {
+        font-size: 13px; /* Reduzir o tamanho das labels */
+    }
+
+    input {
+        font-size: 14px; /* Reduzir o tamanho da fonte nos campos de entrada */
+    }
+
+    button {
+        font-size: 16px; /* Reduzir o tamanho da fonte no botão */
+        padding: 10px 18px; /* Ajustar o padding do botão */
+    }
+
+    /* Mensagens */
+    #responseMessage {
+        font-size: 14px; /* Reduzir o tamanho das mensagens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Garantir que o container ocupe toda a tela em dispositivos muito pequenos */
+        padding: 20px; /* Ajustar padding para dispositivos muito pequenos */
+    }
+
+    h2 {
+        font-size: 22px; /* Ajuste maior no tamanho do título */
+    }
+
+    input {
+        font-size: 14px; /* Ajustar tamanho do input */
+    }
+
+    button {
+        font-size: 14px; /* Ajustar o tamanho da fonte do botão */
+        padding: 8px 16px; /* Ajustar o tamanho do botão */
+    }
+
+    /* Mensagens */
+    #responseMessage {
+        font-size: 13px; /* Reduzir mais o tamanho das mensagens */
+    }
+}
